@@ -11,19 +11,19 @@ defmodule InvoiceValidatorTest do
 
    {"72 hrs atras",    "America/Tijuana",  ~N[2022-03-20 13:06:31],  :fail},
    {"72 hrs atras",    "America/Mazatlan",  ~N[2022-03-20 14:06:31],  :fail},
-   {"72 hrs atras",    "America/Mexico_City",     ~N[2022-03-20 15:06:31],  :fail},
+   {"72 hrs atras",    "America/General",     ~N[2022-03-20 15:06:31],  :fail},
    {"72 hrs atras",    "America/Cancun",     ~N[2022-03-20 16:06:31],  :fail},
    {"72 hrs atras",    "America/Tijuana",  ~N[2022-03-20 13:06:35],  :succes},
    {"72 hrs atras",    "America/Mazatlan",  ~N[2022-03-20 14:06:35],  :succes},
-   {"72 hrs atras",    "America/Mexico_City",     ~N[2022-03-20 15:06:35],  :succes},
+   {"72 hrs atras",    "America/General",     ~N[2022-03-20 15:06:35],  :succes},
    {"72 hrs atras",    "America/Cancun",     ~N[2022-03-20 16:06:35],  :succes},
    {"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:35],  :succes},
    {"5 mns adelante",  "America/Mazatlan",  ~N[2022-03-23 14:11:35],  :succes},
-   {"5 mns adelante",  "America/Mexico_City",     ~N[2022-03-23 15:11:35],  :succes},
+   {"5 mns adelante",  "America/General",     ~N[2022-03-23 15:11:35],  :succes},
    {"5 mns adelante",  "America/Cancun",     ~N[2022-03-23 16:11:35],  :succes},
    {"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:36],  :fail},
    {"5 mns adelante",  "America/Mazatlan",  ~N[2022-03-23 14:11:36],  :fail},
-   {"5 mns adelante",  "America/Mexico_City",     ~N[2022-03-23 15:11:36],  :fail},
+   {"5 mns adelante",  "America/General",     ~N[2022-03-23 15:11:36],  :fail},
    {"5 mns adelante",  "America/Cancun",     ~N[2022-03-23 16:11:36],  :fail},
 
   ]
