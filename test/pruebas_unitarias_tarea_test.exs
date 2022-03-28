@@ -42,4 +42,4 @@ defmodule InvoiceValidatorTest do
     defp datetime(%NaiveDateTime{} = ndt, tz) do
       DateTime.from_naive!(ndt, tz)
      end
- end
+end
