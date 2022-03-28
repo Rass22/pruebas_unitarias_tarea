@@ -28,18 +28,18 @@ defmodule InvoiceValidatorTest do
 
   ]
 
-for {a, b, c, d} <- data do
-  @a a
-  @b b
-  @c c
-  @d d
+  for {a, b, c, d} <- data do
+    @a a
+    @b b
+    @c c
+    @d d
 
-  test "#{@a}, emisor in #{@b} at #{@c} returns #{@d}" do
-    assert DateTime.compare(datetime(@c, @b), datetime(@c, @b)) == :eq
+    test "#{@a}, emisor in #{@b} at #{@c} returns #{@d}" do
+      assert DateTime.compare(datetime(@c, @b), datetime(@c, @b)) == :eq
+    end
   end
-end
 
-  defp datetime(%NaiveDateTime{} = ndt, tz) do
-    DateTime.from_naive!(ndt, tz)
-  end
-end
+    defp datetime(%NaiveDateTime{} = ndt, tz) do
+      DateTime.from_naive!(ndt, tz)
+     end
+ end
