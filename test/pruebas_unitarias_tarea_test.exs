@@ -1,6 +1,5 @@
 defmodule InvoiceValidatorTest do
   use ExUnit.Case, async: false
-  ##import InvoiceValidator
 
   Calendar.put_time_zone_database(Tzdata.TimeZoneDatabase)
 
