@@ -6,16 +6,19 @@ defmodule InvoiceValidator do
           # diff -> devuelve la diferencia en segundos
           DateTime.diff(emisor_dt, pac_dt) <= 300 ->
             :ok
-          true -> {:error, "Invoice is more than 5 mins ahead in time"}
+          true -> :error
         end
       :lt -> #less than
         cond do
           DateTime.diff(pac_dt, emisor_dt) <= 259200 ->
             :ok
-          true -> {:error, "Invoice was issued more than 72 hrs before received by the PAC"}
+          true -> :error
         end
       :eq -> #equal
         :ok
     end
   end
 end
+
+# 300 segundos = 5 min
+# 259200 segundos = 72 horas = 3 dias
