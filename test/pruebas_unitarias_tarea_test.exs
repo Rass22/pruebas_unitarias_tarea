@@ -5,6 +5,7 @@ defmodule InvoiceValidatorTest do
 
   @tz_cdmx "America/Mexico_City"
 
+  #timbrado
   @pac_dt DateTime.from_naive!(~N[2022-03-23 15:06:35], @tz_cdmx)
 
   data =  [
