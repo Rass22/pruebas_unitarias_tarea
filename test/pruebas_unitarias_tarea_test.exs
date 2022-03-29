@@ -29,14 +29,14 @@ defmodule InvoiceValidatorTest do
 
   ]
 
-  for {descripcion, timezone, fecha_emision, status} <- data do
-    @descripcion descripcion
-    @timezone timezone
-    @fecha_emision fecha_emision
-    @status status
+  for {a, b, c, d} <- data do
+    @a a
+    @b b
+    @c c
+    @d d
 
-    test "#{@descripcion}, emisor in #{@timezone} at #{@fecha_emision} returns #{@status}" do
-      assert InvoiceValidator.validate_dates(datetime(@fecha_emision, @timezone),@pac_dt) == @status
+    test "#{@a}, emisor in #{@b} at #{@c} returns #{@d}" do
+      assert InvoiceValidator.validate_dates(datetime(@c, @b),@pac_dt) == @d
     end
   end
 
